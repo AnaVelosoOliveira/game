@@ -5,9 +5,8 @@ import Animated, { useSharedValue, useAnimatedStyle, withSequence, withTiming } 
 
 
 export default function Dino() {
-    const {jumping, stopJump} = useGame();
+    const {jumping, stopJump, dinoheight} = useGame();
 
-    const dinoheight = useSharedValue(0);
 
     function headleJump(){
         dinoheight.value = 
@@ -63,6 +62,6 @@ const styles = StyleSheet.create({
         position: "absolute",
         zIndex: 10,
         bottom: "40%",
-        left: "10%"
+        left: 50
     },
 })
