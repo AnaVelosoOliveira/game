@@ -1,9 +1,6 @@
-import Dino from "@/components/Dino";
-import Obstacle from "@/components/Obstacle";
-import Score from "@/components/score";
 import { useGame } from "@/hooks/gameHook";
 import { Link } from "expo-router";
-import { ImageBackground, StyleSheet, View, Image, Text } from "react-native";
+import { Image, ImageBackground, StyleSheet, Text, View } from "react-native";
 
 
 export default function End() {
@@ -26,7 +23,7 @@ export default function End() {
             
     
                 <Link href="/" asChild>
-                    <Text style={styles.text}>Voltar</Text>
+                    <Text style={styles.button}>Voltar</Text>
                 </Link>
         </View>
         </View>
@@ -64,14 +61,26 @@ const styles = StyleSheet.create({
 },
 textContainer:{
     position: "absolute",
-    top: "50%",
-    left: "50%",
-    transform: [{translateX: "-50%"}, {translateY: "-50%"}],
+    top: "30%",
+    alignSelf: "center",
     gap: 10,
-    textAlign: "center"
-
+    alignItems: "center",
+    padding: 10,
+    borderRadius: 10
 },
+
 text:{
-    
+    fontSize: 40,
+    fontWeight: "bold",
+    paddingHorizontal: 10
+},
+
+button:{
+    backgroundColor: "#090909",
+    borderRadius: 999,
+    color: "#ffffff",
+    paddingHorizontal: 60,
+    paddingVertical: 10,
+    fontSize: 25
 }
 });

@@ -1,7 +1,7 @@
 import Dino from "@/components/Dino";
 import Moving from "@/components/Moving";
 import Obstacle from "@/components/Obstacle";
-import Score from "@/components/score";
+import Score from "@/components/Score";
 import { useGame } from "@/hooks/gameHook";
 import { useEffect, useState } from "react";
 import { Pressable, StyleSheet, View } from "react-native";

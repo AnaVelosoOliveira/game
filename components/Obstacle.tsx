@@ -5,6 +5,7 @@ import Animated, { useAnimatedStyle, useSharedValue, withTiming, Easing, useAnim
 import dinoMovingBitmap from "@/assets/bitmaps/correndo.json";
 import dinoJumpingBitmap from "@/assets/bitmaps/parado.json";
 import cactusBitmap from "@/assets/bitmaps/cactus.json";
+import { router } from "expo-router";
 
 
 
@@ -55,7 +56,7 @@ export default function Obstacle({onEnd}: any ){
 
                 dinoBitmap[xDino][yDino] && cactusBitmap
                 [xCactus][yCactus]){
-            console.log("Pixel collision");
+                    router.replace("/end");
             }
         }
       }
